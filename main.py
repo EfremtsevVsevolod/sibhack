@@ -94,8 +94,6 @@ def main():
     if vis_data is None and os.path.exists(SAVE_DATASET_FILE):
         vis_data = pd.read_csv(SAVE_DATASET_FILE)
     
-    st.text(len(vis_data))
-    
     if vis_data is not None:
         city_req = st.sidebar.text_input("Поиск города")
         top_subject_infec = st.sidebar.slider("Топ областей с высоким уровнем опасности заражения", 0, min(len(vis_data), 30), 0, 1)
