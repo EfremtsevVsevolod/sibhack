@@ -94,7 +94,7 @@ def main():
     if vis_data is None and os.path.exists(SAVE_DATASET_FILE):
         vis_data = pd.read_csv(SAVE_DATASET_FILE)
     
-    st.text(vis_data.columns)
+    st.text(len(vis_data))
     
     if vis_data is not None:
         city_req = st.sidebar.text_input("Поиск города")
